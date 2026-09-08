@@ -1,28 +1,26 @@
-name: Build CustomItems
+plugins {
+    id 'java'
+}
 
-on:
-  push:
-  workflow_dispatch:
+group = 'com.lumi.customitems'
+version = '1.0.0'
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
 
-    steps:
-      - name: Descargar código
-        uses: actions/checkout@v4
+dependencies {
+    compileOnly("io.papermc.paper:paper-api:1.21.8-R0.1-SNAPSHOT")
+}
 
-      - name: Configurar Java 21
-        uses: actions/setup-java@v4
-        with:
-          java-version: '21'
-          distribution: 'temurin'
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
 
-      - name: Compilar plugin
-        run: gradle build
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
 
-      - name: Guardar JAR
-        uses: actions/upload-artifact@v4
-        with:
-          name: CustomItems
-          path: build/libs/*.jar
+jar {
+    archiveFileName = "CustomItems-${version}.jar"
+}
+
