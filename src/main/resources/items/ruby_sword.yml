@@ -1,0 +1,26 @@
+id: ruby_sword
+material: DIAMOND_SWORD
+name: "&c&lEspada de Rubí"
+lore:
+  - "&7Forjada con un rubí antiguo."
+  - ""
+  - "&c⚔ Daño: &f15"
+custom-model-data: 10001
+unbreakable: true
+glow: true
+
+attributes:
+  attack_damage: 15.0
+  attack_speed: 1.6
+
+enchants:
+  sharpness: 5
+
+abilities:
+  right-click:
+    cooldown: 10
+    actions:
+      - sound: ENTITY_BLAZE_SHOOT
+      - particle: FLAME
+      - message: "&c¡La Espada de Rubí libera su poder!"
+
