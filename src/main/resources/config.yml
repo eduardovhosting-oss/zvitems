@@ -1,0 +1,6 @@
+prefix: "&8[&dCustomItems&8] &r"
+resource-pack:
+  enabled: true
+  namespace: "customitems"
+  generate-on-start: true
+  custom-model-data-start: 10000
