@@ -17,13 +17,9 @@ jobs:
         with:
           java-version: '21'
           distribution: 'temurin'
-          cache: 'gradle'
-
-      - name: Dar permisos a Gradle
-        run: chmod +x gradlew
 
       - name: Compilar plugin
-        run:   gradle build
+        run: gradle build
 
       - name: Guardar JAR
         uses: actions/upload-artifact@v4
