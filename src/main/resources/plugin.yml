@@ -1,0 +1,17 @@
+name: CustomItems
+version: 1.0.0
+main: com.lumi.customitems.CustomItemsPlugin
+api-version: '1.21'
+author: lumi
+description: Highly configurable custom item framework for Paper 1.21.8
+commands:
+  customitems:
+    description: Main CustomItems command
+    aliases: [ci, customitem]
+    usage: /customitems <give|list|reload|pack|editor>
+permissions:
+  customitems.admin:
+    default: op
+  customitems.give:
+    default: op
+
