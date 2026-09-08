@@ -4,16 +4,12 @@ pluginManagement {
         mavenCentral()
     }
 }
-
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
-
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         mavenCentral()
-        maven {
-            url = uri("https://repo.papermc.io/repository/maven-public/")
-        }
+        maven { url = uri("https://repo.papermc.io/repository/maven-public/") }
     }
 }
-
 rootProject.name = "CustomItems"
+
